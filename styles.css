@@ -17,7 +17,7 @@ body {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; /* Distribuye los videos de derecha a izquierda */
-            gap: 20px; /* Espacio entre los videos */
+            gap: 1px; /* Espacio entre los videos */
         }
 
         .video-item {
@@ -29,8 +29,8 @@ body {
 
         .video-item video {
             width: 100%; /* El video ocupará todo el espacio dentro de su contenedor */
-            max-width: 300px; /* Tamaño máximo del video */
-            border: 3px solid #fff;
+            max-width: 250px; /* Tamaño máximo del video */
+            border: 3px solid black;
             border-radius: 10px;
         }
 
