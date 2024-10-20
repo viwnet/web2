@@ -1,54 +1,21 @@
 body {
-            font-family: Arial, sans-serif;
-            background-color: #000; /* Fondo negro */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        h1 {
-            color: red; /* Título de color rojo */
-            text-shadow: 2px 2px 5px #000; /* Sombras al título */
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Alinea los videos de derecha a izquierda */
+    gap: 20px; /* Espacio entre videos */
+    width: 90%;  /* Ajusta el ancho del contenedor */
+}
 
-        .video-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between; /* Distribuye los videos de derecha a izquierda */
-            gap: 1px; /* Espacio entre los videos */
-        }
-
-        .video-item {
-            flex: 1 1 calc(25% - 20px); /* Cuatro videos por fila */
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center; /* Centra el video dentro de su contenedor */
-        }
-
-        .video-item video {
-            width: 100%; /* El video ocupará todo el espacio dentro de su contenedor */
-            max-width: 250px; /* Tamaño máximo del video */
-            border: 3px solid black;
-            border-radius: 10px;
-        }
-
-        /* Para pantallas más pequeñas (como móviles), ajusta la cantidad de videos por fila */
-        @media (max-width: 1200px) {
-            .video-item {
-                flex: 1 1 calc(33.333% - 20px); /* Tres videos por fila en pantallas medianas */
-            }
-        }
-
-        @media (max-width: 800px) {
-            .video-item {
-                flex: 1 1 calc(50% - 20px); /* Dos videos por fila en pantallas pequeñas */
-            }
-        }
-
-        @media (max-width: 500px) {
-            .video-item {
-                flex: 1 1 100%; /* Un video por fila en pantallas muy pequeñas */
-            }
-        }
+video {
+    width: calc(25% - 20px);  /* 25% del ancho menos el espacio entre videos */
+    margin-bottom: 20px; /* Espacio vertical entre filas de videos */
+}
