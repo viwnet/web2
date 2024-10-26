@@ -2,9 +2,21 @@ body {
     background-color: black;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 15px;
+    margin-top: 10px;
+    color: red;
 }
 
 .video-container {
