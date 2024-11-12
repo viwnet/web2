@@ -1,0 +1,79 @@
+/* Fondo de la página en negro */
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    color: white;
+}
+
+/* Centra el header y la descripción */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+}
+
+/* Contenedor de los botones, centrados */
+.section-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones con animación en el borde */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent; /* Fondo transparente */
+    text-decoration: none;
+    border: 2px solid white; /* Borde blanco inicial */
+    border-radius: 5px;
+    text-align: center;
+    animation: bordeParpadeo 1s infinite; /* Animación de parpadeo en el borde */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra alrededor del botón */
+}
+
+.button:hover {
+    border-color: red;
+}
+
+/* Animación para el borde del botón */
+@keyframes bordeParpadeo {
+    0%, 100% {
+        border-color: white;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+    }
+    50% {
+        border-color: red;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Sombra roja */
+    }
+}
+
+/* Contenedor de videos */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Alinea los videos de derecha a izquierda */
+    gap: 20px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* Estilo para los videos sin marco */
+video {
+    width: calc(25% - 20px); /* 4 videos por fila */
+    margin-bottom: 20px;
+}
