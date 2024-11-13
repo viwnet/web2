@@ -80,13 +80,21 @@ video {
 
 /* Estilos del medidor de velocidad */
 .speedometer {
+    position: fixed; /* Fija el medidor en la pantalla */
+    top: 0; /* Alinea el medidor en la parte superior */
+    left: 50%; /* Posición centrada horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrarlo exactamente */
     display: flex;
-    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
     gap: 20px;
     background-color: #333;
     padding: 10px 20px;
     border-radius: 8px;
-    margin-top: 20px; /* Espacio adicional debajo de la descripción */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo ajustable */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto flotante */
+    z-index: 1000; /* Asegura que esté encima del resto del contenido */
 }
 
 .upload, .ping, .download {
